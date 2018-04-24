@@ -13,6 +13,11 @@
   },
   "author": "Madeline Peters, Earl Jay Caoile",
   "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "pg": "^6.4.2",
+    "cors": "^2.8.4"
+  },
   "bugs": {
     "url": "https://github.com/Madeline-and-Earl-Jay/book-list-server/issues"
   },
