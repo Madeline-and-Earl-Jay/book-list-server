@@ -17,7 +17,7 @@ app.use(cors());
 app.get('/test', (req, res) => res.send('lolwat'));
 
 app.get('/api/v1/tasks', (req, res) => {
-  client.query(`SELECT * from tasks;`)
+  client.query(`SELECT * from books;`)
     .then(results => res.send(results.rows))
     .catch(console.error);
 });
@@ -26,4 +26,11 @@ app.get('*', (req, res) => res.redirect(CLIENT_URL));
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
 
+/*
+CREATE DATABASE book_app;
 
+CREATE TABLE books;
+
+CREATE TABLE books ( book_id SERIAL PRIMARY KEY, author TEXT, title TEXT, isbn VARCHAR(20), image_url VARCHAR(255), description TEXT );
+
+*/
