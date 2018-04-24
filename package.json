@@ -1,0 +1,20 @@
+{
+  "name": "book-list-server",
+  "version": "1.0.0",
+  "description": "Codefellows 301 Book App Week 3 Server Side",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Madeline-and-Earl-Jay/book-list-server.git"
+  },
+  "author": "Madeline Peters, Earl Jay Caoile",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Madeline-and-Earl-Jay/book-list-server/issues"
+  },
+  "homepage": "https://github.com/Madeline-and-Earl-Jay/book-list-server#readme"
+}
