@@ -119,7 +119,7 @@ app.listen(PORT, () => console.log(`Listening on port: ${PORT}`));
 function loadDB() {
   client.query(`
     CREATE TABLE IF NOT EXISTS
-    books (
+    books(
       book_id SERIAL PRIMARY KEY,
       author TEXT NOT NULL,
       title VARCHAR(255) NOT NULL,
