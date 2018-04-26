@@ -113,7 +113,7 @@ function loadBooks() {
             books(author, title, isbn, image_url, description)
             VALUES ($1, $2, $3, $4, $5);
           `,
-              [ele.author, ele.title, ele.isbn, ele.image_url, ele.description]
+            [ele.author, ele.title, ele.isbn, ele.image_url, ele.description]
             );
           });
         });
