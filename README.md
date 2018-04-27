@@ -15,4 +15,7 @@ HTML5, CSS3, JS, jQuery, SQL, Handlebars.
 ## Change Log
 04-24-2018 11:17am - Application now has a readme.
 
+04-25-2018 2:00pm - Application uses Handlebars to append books information to the home page.
+
 ## Credits and Collaborations
+Lab 10, Code Fellows, TAs

@@ -23,7 +23,15 @@ app.get('/api/v1/books', (req, res) => {
     .catch(console.error);
 });
 
-app.post('/books', (request, response) => {
+app.get('/api/v1/books/:id', (req, res) => {
+  client.query(`SELECT * from books WHERE book_id = $1`, [req.params.id])
+    .then(results => res.send(results.rows[0]))
+    .catch(err => {
+      console.error(err);
+      res.status(500).send('error');
+    });
+});
+app.post('/api/v1/books', (request, response) => {
   client.query(
     `INSERT INTO
     books(author, title, isbn, image_url, description)
@@ -37,14 +45,12 @@ app.post('/books', (request, response) => {
       request.body.description
     ]
   )
-    .then(function () {
-      response.send('insert complete');
-    })
-    .catch(function (err) {
+    .then(results => response.json(results))
+    .catch(err => {
       console.error(err);
+      response.sendStatus(500).send("Error");
     });
 });
-
 app.put('/books/:id', (request, response) => {
   client.query(
     `UPDATE books
@@ -138,5 +144,4 @@ CREATE DATABASE book_app;
 CREATE TABLE books;
 
 CREATE TABLE books ( book_id SERIAL PRIMARY KEY, author TEXT, title TEXT, isbn VARCHAR(20), image_url VARCHAR(255), description TEXT );
-
 */
